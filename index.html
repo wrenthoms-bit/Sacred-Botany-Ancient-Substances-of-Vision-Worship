@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Botany: Ancient Substances of Vision & Worship</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts: Cinzel Decorative, Cormorant Garamond, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- FontAwesome for fallback icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#0d1e17',
+            gold: {
+              light: '#f1d288',
+              DEFAULT: '#c5a059',
+              dark: '#9c7333',
+            },
+            parchment: '#f9f6f0',
+            stone: '#e5dec9',
+            charcoal: '#171917',
+            moss: '#244535',
+            earth: '#42281a',
+          },
+          fontFamily: {
+            display: ['"Cinzel Decorative"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-gold': '0 0 15px rgba(197, 160, 89, 0.3)',
+            'inner-deep': 'inset 0 2px 10px rgba(0, 0, 0, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0d1e17;
+      color: #f9f6f0;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0d1e17;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c5a059;
+      border-radius: 3px;
+    }
+    /* Ethereal pulsing glow animation */
+    @keyframes float-glow {
+      0%, 100% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.2));
+      }
+      50% {
+        transform: translateY(-8px);
+        filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.5));
+      }
+    }
+    .pulse-glow {
+      animation: float-glow 5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="selection:bg-gold selection:text-forest overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <!-- Header Banner -->
+  <header class="border-b border-gold/30 bg-forest/90 backdrop-blur sticky top-0 z-50 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <svg class="w-8 h-8 text-gold pulse-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2L2 22h20L12 2z" stroke-linejoin="round"/>
+          <path d="M12 5l-7 14h14l-7-14z"/>
+          <circle cx="12" cy="13" r="3" />
+          <path d="M12 10v6M10 13h4" />
+        </svg>
+        <div>
+          <h1 class="font-display text-gold tracking-widest text-lg sm:text-xl font-bold">SACRED BOTANY</h1>
+          <p class="font-sans text-[10px] tracking-widest text-stone/70 uppercase">Substances of Vision & Worship</p>
+        </div>
+      </div>
+      <nav class="font-sans text-xs tracking-wider uppercase flex gap-4 md:gap-6">
+        <a href="#codex" class="hover:text-gold transition duration-300 border-b border-transparent hover:border-gold pb-1">Codex</a>
+        <a href="#map" class="hover:text-gold transition duration-300 border-b border-transparent hover:border-gold pb-1">Origins Map</a>
+        <a href="#timeline" class="hover:text-gold transition duration-300 border-b border-transparent hover:border-gold pb-1">Chronology</a>
+        <a href="#quiz" class="hover:text-gold transition duration-300 border-b border-transparent hover:border-gold pb-1">Botany Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center py-20 px-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-moss via-forest to-forest border-b border-gold/20 overflow-hidden">
+    <!-- Starry background decoration -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(circle_at_25%_35%,rgba(241,210,136,0.3)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    
+    <div class="max-w-4xl mx-auto text-center z-10 relative">
+      <div class="inline-block border border-gold/40 px-4 py-1.5 rounded-full bg-forest/80 mb-6 backdrop-blur">
+        <span class="font-sans text-xs uppercase tracking-[0.25em] text-gold-light">A Historical & Pharmacological Journey</span>
+      </div>
+      
+      <h2 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-wider leading-tight text-parchment drop-shadow-lg mb-8">
+        ANCIENT <span class="text-gold">SUBSTANCES</span>
+      </h2>
+      
+      <p class="font-serif text-xl sm:text-2xl md:text-3xl font-light italic leading-relaxed text-stone max-w-3xl mx-auto mb-10">
+        "Ancient civilizations treated these specific substances not as chemical recreation, but as sacred portals for healing, communion, and divination."
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#codex" class="w-full sm:w-auto px-8 py-3.5 bg-gold text-forest font-sans text-sm font-semibold uppercase tracking-wider rounded border border-gold hover:bg-transparent hover:text-gold transition duration-300 shadow-glow-gold">
+          Open the Codex
+        </a>
+        <a href="#map" class="w-full sm:w-auto px-8 py-3.5 border border-stone/30 text-stone hover:border-gold hover:text-gold font-sans text-sm font-semibold uppercase tracking-wider rounded transition duration-300">
+          Explore World Origins
+        </a>
+      </div>
+
+      <!-- Sacred Geometry Centerpiece -->
+      <div class="mt-16 flex justify-center opacity-60">
+        <svg class="w-24 h-24 text-gold/30 animate-[spin_40s_linear_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.75">
+          <circle cx="50" cy="50" r="45"/>
+          <circle cx="50" cy="50" r="30"/>
+          <polygon points="50,5 95,80 5,80" />
+          <polygon points="50,95 95,20 5,20" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section id="map" class="py-20 px-4 max-w-7xl mx-auto border-b border-gold/15">
+    <div class="text-center mb-16">
+      <span class="font-sans text-xs uppercase tracking-widest text-gold">Geography of the Psyche</span>
+      <h3 class="font-display text-3xl sm:text-4xl font-bold text-parchment mt-2 mb-4">MAPPING SACRED SITES</h3>
+      <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+      <p class="font-serif text-lg text-stone/80 max-w-xl mx-auto mt-4 italic">Select a historical region to filter and uncover ancient flora and mystical traditions native to those domains.</p>
+    </div>
+
+    <!-- Map & Panel Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Interactive Grid Map (100% vector style logic) -->
+      <div class="lg:col-span-7 bg-charcoal/40 border border-gold/20 rounded-lg p-6 flex flex-col justify-between relative shadow-inner-deep">
+        <h4 class="font-sans text-xs text-gold/70 uppercase tracking-widest mb-4">Historical Coordinates</h4>
+        
+        <!-- Abstract World Map UI Grid -->
+        <div class="relative w-full aspect-[16/9] border border-stone/10 rounded overflow-hidden bg-forest/30 flex items-center justify-center p-2">
+          <!-- Stylized map backdrop (using abstract patterns) -->
+          <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          
+          <!-- Hotspot Overlay -->
+          <div class="absolute inset-0 w-full h-full grid grid-cols-12 grid-rows-6 z-10">
+            <!-- Central Amazon Zone -->
+            <button onclick="selectRegion('amazon')" class="col-start-3 col-end-5 row-start-4 row-end-6 group flex items-center justify-center relative">
+              <span class="absolute w-6 h-6 bg-gold/20 rounded-full animate-ping group-hover:bg-gold/40"></span>
+              <span class="absolute w-3.5 h-3.5 bg-gold rounded-full border border-forest"></span>
+              <span class="absolute bottom-full mb-1 text-[10px] font-sans tracking-wider bg-forest/90 text-gold-light border border-gold/30 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Amazon</span>
+            </button>
+            
+            <!-- Mesoamerica -->
+            <button onclick="selectRegion('mesoamerica')" class="col-start-2 col-end-4 row-start-3 row-end-4 group flex items-center justify-center relative">
+              <span class="absolute w-6 h-6 bg-gold/20 rounded-full animate-ping group-hover:bg-gold/40"></span>
+              <span class="absolute w-3.5 h-3.5 bg-gold rounded-full border border-forest"></span>
+              <span class="absolute bottom-full mb-1 text-[10px] font-sans tracking-wider bg-forest/90 text-gold-light border border-gold/30 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Mesoamerica</span>
+            </button>
+
+            <!-- Mediterranean / Crete / Sumer -->
+            <button onclick="selectRegion('mediterranean')" class="col-start-6 col-end-8 row-start-2 row-end-4 group flex items-center justify-center relative">
+              <span class="absolute w-6 h-6 bg-gold/20 rounded-full animate-ping group-hover:bg-gold/40"></span>
+              <span class="absolute w-3.5 h-3.5 bg-gold rounded-full border border-forest"></span>
+              <span class="absolute bottom-full mb-1 text-[10px] font-sans tracking-wider bg-forest/90 text-gold-light border border-gold/30 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Mediterranean</span>
+            </button>
+
+            <!-- Central Asia / India / China -->
+            <button onclick="selectRegion('central-asia')" class="col-start-8 col-end-11 row-start-2 row-end-4 group flex items-center justify-center relative">
+              <span class="absolute w-6 h-6 bg-gold/20 rounded-full animate-ping group-hover:bg-gold/40"></span>
+              <span class="absolute w-3.5 h-3.5 bg-gold rounded-full border border-forest"></span>
+              <span class="absolute bottom-full mb-1 text-[10px] font-sans tracking-wider bg-forest/90 text-gold-light border border-gold/30 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Central/East Asia</span>
+            </button>
+
+            <!-- Sahara / Africa -->
+            <button onclick="selectRegion('sahara')" class="col-start-5 col-end-7 row-start-3 row-end-5 group flex items-center justify-center relative">
+              <span class="absolute w-6 h-6 bg-gold/20 rounded-full animate-ping group-hover:bg-gold/40"></span>
+              <span class="absolute w-3.5 h-3.5 bg-gold rounded-full border border-forest"></span>
+              <span class="absolute bottom-full mb-1 text-[10px] font-sans tracking-wider bg-forest/90 text-gold-light border border-gold/30 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Sahara</span>
+            </button>
+          </div>
+
+          <!-- Abstract minimal world map render using grid patterns -->
+          <div class="grid grid-cols-24 gap-[2px] w-full h-full opacity-35 select-none pointer-events-none">
+            <!-- Generate a premium block pattern representing Earth -->
+            <script>
+              const landMap = [
+                // 1
+                "000001111100000000000000",
+                "001111111111001111110000",
+                "011111111111111111111000",
+                "001111100011111111111000",
+                "000110000001111111100000",
+                "000011000000011101100000",
+                "000001000000000000110000",
+                "000000000000000000000000"
+              ];
+              for(let row of landMap){
+                for(let char of row){
+                  document.write(`<div class="aspect-square rounded-[1px] ${char === '1' ? 'bg-stone/20' : 'bg-transparent'}"></div>`);
+                }
+              }
+            </script>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 justify-center">
+          <button onclick="selectRegion('amazon')" class="px-3 py-1 text-xs rounded border border-gold/20 hover:border-gold hover:text-gold transition">Amazon Basin</button>
+          <button onclick="selectRegion('mesoamerica')" class="px-3 py-1 text-xs rounded border border-gold/20 hover:border-gold hover:text-gold transition">Mesoamerica</button>
+          <button onclick="selectRegion('mediterranean')" class="px-3 py-1 text-xs rounded border border-gold/20 hover:border-gold hover:text-gold transition">Mesopotamia & Crete</button>
+          <button onclick="selectRegion('central-asia')" class="px-3 py-1 text-xs rounded border border-gold/20 hover:border-gold hover:text-gold transition">Central Asia & India</button>
+          <button onclick="selectRegion('sahara')" class="px-3 py-1 text-xs rounded border border-gold/20 hover:border-gold hover:text-gold transition">Sahara Desert</button>
+        </div>
+      </div>
+
+      <!-- Information Panel -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div id="map-panel" class="bg-moss/40 border border-gold/20 rounded-lg p-6 flex flex-col justify-between h-full relative overflow-hidden">
+          <!-- Dynamic info gets loaded here -->
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-sans text-[10px] text-gold tracking-[0.2em] uppercase font-bold" id="panel-meta">Selected Site</span>
+              <i class="fa-solid fa-feather-pointed text-gold animate-pulse"></i>
+            </div>
+            <h5 class="font-display text-2xl text-parchment font-semibold" id="panel-title">Click a glowing coordinates point</h5>
+            <p class="font-serif text-base text-stone/90 mt-4 leading-relaxed italic" id="panel-extract">
+              Select one of the flashing points on the coordinate grid map to unlock geographical records of plant lore, archaeological proofs, and native rituals.
+            </p>
+            <div id="panel-bullets" class="mt-6 space-y-3 font-sans text-xs text-stone/80">
+              <!-- Dynamically populated bullets -->
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-4 border-t border-gold/10 flex justify-between items-center text-xs font-sans text-stone/50">
+            <span>Historical Botany Grid Map</span>
+            <span class="text-gold tracking-widest font-bold">SACRED SEEDS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sacred Codex Section -->
+  <section id="codex" class="py-20 px-4 bg-charcoal/20 border-b border-gold/15">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Mystical Pharmacopeia</span>
+        <h3 class="font-display text-3xl sm:text-4xl font-bold text-parchment mt-2 mb-4">THE SACRED CODEX</h3>
+        <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+        <p class="font-serif text-lg text-stone/80 max-w-xl mx-auto mt-4 italic">Behold the central catalog of ancient consciousness elements, detailed with their original nomenclature, visual seals, and indigenous uses.</p>
+      </div>
+
+      <!-- Main Codex Explorer Interface -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Substance Selector Tab list -->
+        <div class="lg:col-span-4 space-y-3">
+          <script>
+            const substances = [
+              {
+                id: 'dmt',
+                name: 'DMT (Vine of the Soul)',
+                chemical: 'Dimethyltryptamine',
+                era: 'Ancient - Contemporary Amazonian tribes',
+                icon: `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />`
+              },
+              {
+                id: 'psilocybin',
+                name: 'Psilocybin (Flesh of the Gods)',
+                chemical: '4-PO-DMT',
+                era: '7000 BCE Sahara / 1000 BCE Mesoamerica',
+                icon: `<path d="M12 2a9 9 0 0 0-9 9c0 1.95.64 3.74 1.72 5.2L4 18h16l-.72-1.8A8.96 8.96 0 0 0 12 2zm-1 16H8a4 4 0 0 1-4-4h7v4zm5 0h-3v-4h7a4 4 0 0 1-4 4z" />`
+              },
+              {
+                id: 'opiates',
+                name: 'Opiates (Opium Poppy)',
+                chemical: 'Morphine, Codeine, & Papaverine',
+                era: '3400 BCE Sumerian Hul Gil',
+                icon: `<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5" stroke-width="0.5"/>`
+              },
+              {
+                id: 'cannabis',
+                name: 'Cannabis (The Ancient Herb)',
+                chemical: 'Tetrahydrocannabinol (THC)',
+                era: '4000 BCE Ancient China / India / Scythians',
+                icon: `<path d="M12 2c0 3 2 5 2 8s-2 5-2 8c0-3-2-5-2-8s2-5 2-8zM12 10c2-2 4-3 6-3s2 2 0 4-4 2-6 1zM12 10c-2-2-4-3-6-3s-2 2 0 4 4 2 6 1zM12 11c2.5.5 5 1.5 5.5 3.5s-1.5 3.5-4 1.5-1.5-5-1.5-5zM12 11c-2.5.5-5 1.5-5.5 3.5s1.5 3.5 4 1.5 1.5-5 1.5-5z"/>`
+              },
+              {
+                id: 'bluelotus',
+                name: 'Blue Lotus & Sacred Wine',
+                chemical: 'Nuciferine & Aporphine',
+                era: 'Ancient Egypt & Roman High Society',
+                icon: `<path d="M12 22s-8-6-8-12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 6-8 12-8 12zM12 4c-3.31 0-6 2.69-6 6 0 3.82 3.73 7.84 6 10.05 2.27-2.21 6-6.23 6-10.05 0-3.31-2.69-6-6-6z"/>`
+              }
+            ];
+
+            substances.forEach((sub, index) => {
+              document.write(`
+                <button id="btn-${sub.id}" onclick="showSubstance('${sub.id}')" class="sub-btn w-full text-left p-4 rounded-lg border transition-all duration-300 flex items-center gap-4 ${index === 0 ? 'bg-moss border-gold text-parchment shadow-glow-gold' : 'bg-charcoal/30 border-gold/10 text-stone/70 hover:border-gold/30 hover:text-stone'}">
+                  <div class="w-10 h-10 rounded-full border border-gold/25 flex items-center justify-center shrink-0 bg-forest/50">
+                    <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      ${sub.icon}
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-display text-md font-semibold tracking-wide text-gold-light">${sub.name}</h4>
+                    <p class="font-sans text-[10px] uppercase tracking-widest text-stone/50 mt-0.5">${sub.era}</p>
+                  </div>
+                </button>
+              `);
+            });
+          </script>
+        </div>
+
+        <!-- Codex Detail Card Area -->
+        <div class="lg:col-span-8">
+          <div class="bg-forest/60 border border-gold/20 rounded-lg p-6 md:p-8 relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
+            <!-- Background watermarked sacred seal -->
+            <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-stone pointer-events-none select-none">
+              <svg class="w-80 h-80 animate-[spin_120s_linear_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <circle cx="50" cy="50" r="48" stroke-width="0.5"/>
+                <polygon points="50,2 95,80 5,80" stroke-width="0.5" />
+                <polygon points="50,98 95,20 5,20" stroke-width="0.5" />
+              </svg>
+            </div>
+
+            <div class="relative z-10">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gold/10 pb-6 mb-6">
+                <div>
+                  <span class="font-sans text-xs text-gold uppercase tracking-[0.2em] font-bold" id="detail-type">DMT Chemistry</span>
+                  <h4 class="font-display text-3xl sm:text-4xl font-bold text-parchment mt-1" id="detail-title">DMT (Dimethyltryptamine)</h4>
+                </div>
+                <div class="flex items-center gap-2 px-3 py-1 bg-charcoal/60 border border-gold/20 rounded-full">
+                  <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                  <span class="font-sans text-[10px] tracking-widest uppercase text-stone/80" id="detail-formula">C12H16N2</span>
+                </div>
+              </div>
+
+              <!-- Content grid -->
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Abstract visual of element -->
+                <div class="md:col-span-4 flex flex-col items-center justify-center p-6 border border-gold/10 rounded-lg bg-charcoal/30 relative">
+                  <div id="codex-seal-container" class="w-32 h-32 text-gold pulse-glow flex items-center justify-center">
+                    <!-- Dynamic seal loaded here -->
+                  </div>
+                  <span class="font-sans text-[9px] uppercase tracking-widest text-stone/40 mt-4">Mystical Archetype Seal</span>
+                </div>
+
+                <!-- Descriptive block -->
+                <div class="md:col-span-8 space-y-6">
+                  <div>
+                    <h5 class="font-sans text-xs uppercase tracking-widest text-gold mb-2">Historical Context</h5>
+                    <p class="font-serif text-lg text-stone/90 leading-relaxed italic" id="detail-context">
+                      "Known famously as the 'Vine of the Soul', Amazonian cultures discovered that combining the Banisteriopsis caapi vine with leaves of Psychotria viridis allows the body to ingest DMT, sparking deep, transformative encounters."
+                    </p>
+                  </div>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gold/5">
+                    <div>
+                      <h6 class="font-sans text-[11px] uppercase tracking-wider text-gold-light mb-1">Indigenous Methods</h6>
+                      <p class="font-serif text-sm text-stone/80" id="detail-method">Snuffed, or brewed with monoamine oxidase inhibitors (MAOIs).</p>
+                    </div>
+                    <div>
+                      <h6 class="font-sans text-[11px] uppercase tracking-wider text-gold-light mb-1">Sacred Symbolism</h6>
+                      <p class="font-serif text-sm text-stone/80" id="detail-symbol">Death-rebirth, astral travel, communion with forest sentience.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Interactive botanical trivia popover -->
+            <div class="mt-10 p-4 border border-gold/10 rounded bg-stone/5 relative z-10">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-seedling text-gold mt-1"></i>
+                <div>
+                  <h6 class="font-sans text-xs font-bold text-gold uppercase tracking-wider">Botanical Secret</h6>
+                  <p class="font-serif text-sm text-stone/80 mt-1" id="detail-botany-secret">
+                    To extract DMT orally, ancient Amazonian shamans discovered organic chemical synthesis without formal lab training: mixing the caapi vine (containing MAO Inhibitors) with Viridis leaves allowed DMT to safely bypass stomach enzymes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="py-20 px-4 max-w-7xl mx-auto border-b border-gold/15">
+    <div class="text-center mb-16">
+      <span class="font-sans text-xs uppercase tracking-widest text-gold">The Flow of Eras</span>
+      <h3 class="font-display text-3xl sm:text-4xl font-bold text-parchment mt-2 mb-4">CHRONOLOGY OF SACRED VISIONS</h3>
+      <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+      <p class="font-serif text-lg text-stone/80 max-w-xl mx-auto mt-4 italic">A chronological ledger of humanity's deepest chemical partnerships, preserved in stone art, architectural artifacts, and written scroll.</p>
+    </div>
+
+    <!-- Vertical / Horizontal Chronologist -->
+    <div class="relative border-l border-gold/20 ml-4 md:ml-32 space-y-12 py-4">
+      
+      <!-- Era Item 1 -->
+      <div class="relative pl-8 md:pl-12 group transition-all duration-300">
+        <!-- Marker point -->
+        <span class="absolute left-0 top-1.5 -translate-x-[9.5px] w-4 h-4 bg-gold border-4 border-forest rounded-full group-hover:scale-125 transition-transform duration-300"></span>
+        <!-- Date display on left for wider screens -->
+        <div class="md:absolute md:right-full md:mr-12 md:top-1 font-display text-lg text-gold font-bold md:w-32 md:text-right">
+          ~ 7000 BCE
+        </div>
+        <div class="bg-charcoal/20 border border-gold/10 rounded-lg p-5 group-hover:border-gold/30 transition-all duration-300">
+          <span class="font-sans text-[10px] text-gold tracking-widest uppercase font-bold">Sahara Cave Paintings</span>
+          <h4 class="font-display text-xl text-parchment mt-1">THE ORIGIN OF TEONANÁCATL</h4>
+          <p class="font-serif text-base text-stone/80 mt-2 leading-relaxed">
+            Cave paintings in Tassili n'Ajjer, deep in the Algerian Sahara, depict mysterious humanoid deities wearing mushroom-head garbs or holding sprouting fungi, establishing some of the earliest documented entheogen interactions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Era Item 2 -->
+      <div class="relative pl-8 md:pl-12 group transition-all duration-300">
+        <!-- Marker point -->
+        <span class="absolute left-0 top-1.5 -translate-x-[9.5px] w-4 h-4 bg-gold border-4 border-forest rounded-full group-hover:scale-125 transition-transform duration-300"></span>
+        <!-- Date display on left -->
+        <div class="md:absolute md:right-full md:mr-12 md:top-1 font-display text-lg text-gold font-bold md:w-32 md:text-right">
+          ~ 4000 BCE
+        </div>
+        <div class="bg-charcoal/20 border border-gold/10 rounded-lg p-5 group-hover:border-gold/30 transition-all duration-300">
+          <span class="font-sans text-[10px] text-gold tracking-widest uppercase font-bold">Neolithic Asia</span>
+          <h4 class="font-display text-xl text-parchment mt-1">HEMP CLOTH & REMEDY SCROLLS</h4>
+          <p class="font-serif text-base text-stone/80 mt-2 leading-relaxed">
+            Early Neolithic cultures in the Yangshao and Longshan regions of China utilize cannabis as hemp fibers for vital fishing cords, sails, and basic medicinal recipes compiled in ancient herbal texts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Era Item 3 -->
+      <div class="relative pl-8 md:pl-12 group transition-all duration-300">
+        <!-- Marker point -->
+        <span class="absolute left-0 top-1.5 -translate-x-[9.5px] w-4 h-4 bg-gold border-4 border-forest rounded-full group-hover:scale-125 transition-transform duration-300"></span>
+        <!-- Date display on left -->
+        <div class="md:absolute md:right-full md:mr-12 md:top-1 font-display text-lg text-gold font-bold md:w-32 md:text-right">
+          ~ 3400 BCE
+        </div>
+        <div class="bg-charcoal/20 border border-gold/10 rounded-lg p-5 group-hover:border-gold/30 transition-all duration-300">
+          <span class="font-sans text-[10px] text-gold tracking-widest uppercase font-bold">Mesopotamian Sumer</span>
+          <h4 class="font-display text-xl text-parchment mt-1">DISCOVERY OF THE JOY PLANT</h4>
+          <p class="font-serif text-base text-stone/80 mt-2 leading-relaxed">
+            The Sumerians design initial clay tablets highlighting the cultivation of the opium poppy (*Papaver somniferum*). They name the wondrous plant *Hul Gil*, meaning the "joy plant," passing its medical secrets directly down to ancient Babylonia and Egypt.
+          </p>
+        </div>
+      </div>
+
+      <!-- Era Item 4 -->
+      <div class="relative pl-8 md:pl-12 group transition-all duration-300">
+        <!-- Marker point -->
+        <span class="absolute left-0 top-1.5 -translate-x-[9.5px] w-4 h-4 bg-gold border-4 border-forest rounded-full group-hover:scale-125 transition-transform duration-300"></span>
+        <!-- Date display on left -->
+        <div class="md:absolute md:right-full md:mr-12 md:top-1 font-display text-lg text-gold font-bold md:w-32 md:text-right">
+          ~ 1000 BCE
+        </div>
+        <div class="bg-charcoal/20 border border-gold/10 rounded-lg p-5 group-hover:border-gold/30 transition-all duration-300">
+          <span class="font-sans text-[10px] text-gold tracking-widest uppercase font-bold">Pre-Classic Mesoamerica</span>
+          <h4 class="font-display text-xl text-parchment mt-1">THE MUSHROOM STONE AGE</h4>
+          <p class="font-serif text-base text-stone/80 mt-2 leading-relaxed">
+            Sacred Mesoamerican mushroom stones carved inside Highland Guatemala and parts of Mexico prove the intense, cross-generational worship of psilocybin during holy gatherings and civic coronations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Botany Quiz Section -->
+  <section id="quiz" class="py-20 px-4 bg-forest/40 border-b border-gold/15">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Temple Ordination</span>
+        <h3 class="font-display text-3xl sm:text-4xl font-bold text-parchment mt-2 mb-4">HISTORICAL BOTANY ASSESSOR</h3>
+        <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+        <p class="font-serif text-lg text-stone/80 max-w-xl mx-auto mt-4 italic">Test your alignment with ancient apothecary secrets to assess if you are ready to claim the rank of Temple High Priest.</p>
+      </div>
+
+      <!-- Quiz Window Box -->
+      <div class="bg-charcoal/60 border border-gold/30 rounded-lg p-6 md:p-10 shadow-2xl relative">
+        <div id="quiz-intro-state" class="text-center py-8">
+          <div class="flex justify-center mb-6">
+            <svg class="w-20 h-20 text-gold/80 pulse-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+          </div>
+          <h4 class="font-display text-2xl text-gold-light mb-4">Wilt thou enter the Temple?</h4>
+          <p class="font-serif text-lg text-stone/80 max-w-md mx-auto mb-8 leading-relaxed">
+            You will be presented with 4 sacred apothecary scenarios from history. Select your responses carefully. One error will trigger a descent back to Neophyte status.
+          </p>
+          <button onclick="startQuiz()" class="px-8 py-3.5 bg-gold text-forest font-sans text-sm font-semibold uppercase tracking-wider rounded border border-gold hover:bg-transparent hover:text-gold transition duration-300">
+            Commence Initiation
+          </button>
+        </div>
+
+        <!-- Active Question State (Hidden by default) -->
+        <div id="quiz-active-state" class="hidden">
+          <div class="flex justify-between items-center border-b border-gold/10 pb-4 mb-6">
+            <span class="font-sans text-xs uppercase tracking-widest text-gold" id="quiz-progress">Question 1 of 4</span>
+            <span class="font-sans text-[10px] uppercase tracking-widest text-stone/50" id="quiz-score-badge">TEMPLE LEVEL</span>
+          </div>
+
+          <h4 class="font-display text-xl sm:text-2xl text-parchment leading-snug mb-8" id="quiz-question-text">
+            Loading question...
+          </h4>
+
+          <div class="space-y-4" id="quiz-options-container">
+            <!-- Dynamic Buttons will populate here -->
+          </div>
+        </div>
+
+        <!-- Result Screen (Hidden by default) -->
+        <div id="quiz-result-state" class="hidden text-center py-8">
+          <div class="flex justify-center mb-6" id="quiz-result-icon">
+            <!-- Dynamic SVG icon based on score -->
+          </div>
+          <h4 class="font-display text-3xl text-gold-light mb-2" id="quiz-result-rank">INITIATE STATUS</h4>
+          <p class="font-serif text-lg text-stone/80 max-w-md mx-auto mb-6" id="quiz-result-desc">
+            Congratulations, you have deciphered the formulas correctly!
+          </p>
+          <div class="p-4 border border-gold/15 rounded bg-forest/50 max-w-sm mx-auto mb-8">
+            <span class="font-sans text-[10px] tracking-widest text-stone/40 uppercase block mb-1">Apothecary Attainment</span>
+            <span class="font-display text-xl text-gold font-bold" id="quiz-result-score">4 out of 4 Correct</span>
+          </div>
+          <button onclick="resetQuiz()" class="px-6 py-2.5 border border-gold/30 text-stone hover:border-gold hover:text-gold font-sans text-xs uppercase tracking-wider rounded transition duration-300">
+            Seek Renewal of Mind
+          </button>
+        </div>
+      </div>
+    </section>
+
+  <!-- Botanical Pharmacy Table -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="font-sans text-xs uppercase tracking-widest text-gold">Synthesized Ledger</span>
+      <h3 class="font-display text-2xl sm:text-3xl font-bold text-parchment mt-1">SACRED FLUIDS REFERENCE</h3>
+    </div>
+    
+    <div class="border border-gold/20 rounded-lg overflow-hidden bg-charcoal/20 backdrop-blur shadow-xl">
+      <div class="overflow-x-auto custom-scrollbar">
+        <table class="w-full font-serif text-left border-collapse">
+          <thead>
+            <tr class="bg-moss/80 border-b border-gold/30 font-sans text-xs uppercase tracking-widest text-gold">
+              <th class="p-4">Substance</th>
+              <th class="p-4">Origin / Age</th>
+              <th class="p-4">Primary Sensation & Utility</th>
+            </tr>
+          </thead>
+          <tbody class="text-stone divide-y divide-gold/10 text-sm">
+            <tr class="hover:bg-moss/10 transition">
+              <td class="p-4 font-bold text-gold-light">Alcohol (Fermented Beer & Wine)</td>
+              <td class="p-4 font-sans text-xs">Egyptians to Incas</td>
+              <td class="p-4">Daily nutritional dietary fluid; consumed historically because it was considerably safer than local surface water.</td>
+            </tr>
+            <tr class="hover:bg-moss/10 transition">
+              <td class="p-4 font-bold text-gold-light">Blue Lotus Extract</td>
+              <td class="p-4 font-sans text-xs">Ancient Egyptian Elite</td>
+              <td class="p-4">Soaked in high-end wines to generate profound relaxation, euphoria, and sacred parties.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gold/20 bg-forest py-12 px-4 text-center text-stone/60">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="flex justify-center">
+        <svg class="w-12 h-12 text-gold/30 animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+          <circle cx="50" cy="50" r="45"/>
+          <circle cx="50" cy="50" r="30" stroke-dasharray="5,5"/>
+        </svg>
+      </div>
+      <p class="font-display text-xs tracking-[0.25em] text-gold">SACRED BOTANY ARCHIVE</p>
+      <p class="font-serif text-sm italic max-w-md mx-auto">"There is no darkness we cannot navigate once we understand the sacred structures that support our self."</p>
+      <div class="h-[1px] w-24 bg-gold/20 mx-auto"></div>
+      <p class="font-sans text-[10px] tracking-widest uppercase">© 2026 Archive of Mystical Plants • Fully Self-Contained Infographic App</p>
+    </div>
+  </footer>
+
+  <!-- Script block for dynamic interactivity -->
+  <script>
+    // --- GEOGRAPHY MAP ZONE SELECTOR DATA ---
+    const regions = {
+      'amazon': {
+        title: 'Amazonian Ayahuasca Breeds',
+        meta: 'The Vine of the Soul',
+        extract: 'Shamanic cultures discovered that combining the Banisteriopsis caapi vine with Psychotria leaves created an orally active DMT journey that could heal deep psychic wounds.',
+        bullets: [
+          '✦ Chemical Magic: Shamanic botany realized the vine deactivated local stomach enzymes to let chemical vision flourish.',
+          '✦ Spiritual Intent: Pure communication with the organic sentience of the deep forest.',
+          '✦ Contemporary Legacy: Retains immense psycho-spiritual healing properties used globally.'
+        ]
+      },
+      'mesoamerica': {
+        title: 'Highland Mesoamerica & Aztecs',
+        meta: 'The Flesh of the Gods',
+        extract: 'The Aztecs called psilocybin mushrooms "Teonanácatl". High-altitude Highland environments supported intense seasonal harvests revered by holy leaders.',
+        bullets: [
+          '✦ Aztec Codex: Consumed at state feasts and holy coronations for celestial validation.',
+          '✦ Mushroom Stones: Archeological findings dating back to 1000 BCE.',
+          '✦ Colonial Backlash: Prohibited under severe punishment by arrivals, forcing practices underground.'
+        ]
+      },
+      'mediterranean': {
+        title: 'The Opium Poppy Cults',
+        meta: 'Sumerian Hul Gil',
+        extract: 'Dating back to 3400 BCE, Sumerians cultivated the poppy fields of Mesopotamia. The Cretans and Egyptians later formulated advanced narcotics from the seeds.',
+        bullets: [
+          '✦ Hul Gil: Translated directly as "The Joy Plant."',
+          '✦ Poppy Goddess: Cretan statues depict divinity adorned with sleep-inducing crown pods.',
+          '✦ Roman Sedatives: Handled in elite high-society homes to suppress chronic pain.'
+        ]
+      },
+      'central-asia': {
+        title: 'Central Asian Steppes & Indus',
+        meta: 'Scythian Baths & Bhang',
+        extract: 'Cannabis holds an unbroken therapeutic lineage stretching over thousands of years across central China, Scythian burial practices, and deep Vedic India.',
+        bullets: [
+          '✦ Chinese Healers: Prescribed as early as 4000 BCE for joints and system balance.',
+          '✦ Felt Smoke Baths: Herodotus recorded nomadic Scythians shouting with glee inside red-hot seed saunas.',
+          '✦ Sacred Bhang: Deeply associated with Lord Shiva to achieve state of divine focus.'
+        ]
+      },
+      'sahara': {
+        title: 'Tassili Sahara Desert Rock Art',
+        meta: 'Sahara Fungi Cave Painters',
+        extract: '7,000–9,000 years ago, green, wet Sahara conditions supported deep grasslands. Ancient painters left proof of mystical relationships on cave walls.',
+        bullets: [
+          '✦ Cave Murals: High-fidelity figures shown floating with lines of fungal sprouts in their hands.',
+          '✦ Ancient Roots: Indicates human chemical vision exploration dates back into Neolithic origins.',
+          '✦ Climate Shift: Fungal regions vanished as the fertile green Sahara transformed to hot desert sand.'
+        ]
+      }
+    };
+
+    function selectRegion(regionId) {
+      const data = regions[regionId];
+      if (!data) return;
+
+      document.getElementById('panel-meta').innerText = data.meta;
+      document.getElementById('panel-title').innerText = data.title;
+      document.getElementById('panel-extract').innerText = data.extract;
+
+      const bulletsContainer = document.getElementById('panel-bullets');
+      bulletsContainer.innerHTML = '';
+      data.bullets.forEach(bullet => {
+        const item = document.createElement('div');
+        item.className = 'py-1 font-serif text-sm italic text-stone/90';
+        item.innerText = bullet;
+        bulletsContainer.appendChild(item);
+      });
+
+      // Simple premium visual highlight flare effect
+      const panel = document.getElementById('map-panel');
+      panel.classList.remove('border-gold/20');
+      panel.classList.add('border-gold');
+      setTimeout(() => {
+        panel.classList.remove('border-gold');
+        panel.classList.add('border-gold/20');
+      }, 500);
+    }
+
+
+    // --- SACRED CODEX INTERACTIVE SYSTEM ---
+    const codexDetails = {
+      'dmt': {
+        title: 'DMT (Vine of the Soul)',
+        type: 'Alkaloid Chemistry',
+        formula: 'C12H16N2',
+        context: 'Indigenous groups of the Amazon combined Banisteriopsis caapi vines with Psychotria viridis leaves to unlock DMT. Through carved bone tubes, other cultures inhaled Cohoba or Yopo powder for prophecy and communal guidance.',
+        method: 'Decoction brewing (Ayahuasca) or sacred snuffs (Cohoba).',
+        symbol: 'Interconnected universes, forest intelligence, death and rebirth.',
+        secret: 'Without complex laboratories, ancient chemists solved the MAOI/DMT synergistic loop, proving that combined botany achieves what singular ingestion cannot.',
+        seal: `<svg class="w-full h-full text-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="50" cy="50" r="40" />
+                <path d="M50 10v80M10 50h80" />
+                <path d="M22 22l56 56M22 78l56-56" />
+                <circle cx="50" cy="50" r="20" stroke-dasharray="2,2"/>
+                <polygon points="50,15 85,75 15,75" />
+               </svg>`
+      },
+      'psilocybin': {
+        title: 'Psilocybin (Flesh of the Gods)',
+        type: 'Fungal Alchemy',
+        formula: 'C12H17N2O4P',
+        context: 'Central American cultures named psilocybin mushrooms "Teonanácatl". Carved Mayan and Mixtec stones dating back to 1000 BCE demonstrate that sacred fungi were deeply integrated into temple initiations and celestial coronations.',
+        method: 'Fresh ingestion during holy feasts, therapeutic ceremonies, and state crowns.',
+        symbol: 'Ancestral voices, sky pathways, animal shapeshifting.',
+        secret: 'Mayan high priests would pair psilocybin with rhythmic drumming, sensory isolation chambers, and dark caverns to trigger deep subconscious transformation.',
+        seal: `<svg class="w-full h-full text-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M50 10a40 40 0 0 0-40 40c0 10 15 30 40 40s40-20 40-40a40 40 0 0 0-40-40z" stroke-dasharray="2,2"/>
+                <circle cx="50" cy="50" r="25" />
+                <path d="M25 50h50M50 25v50" />
+                <circle cx="50" cy="50" r="5" />
+               </svg>`
+      },
+      'opiates': {
+        title: 'Opiates (Opium Poppy)',
+        type: 'Narcotic Chemistry',
+        formula: 'C17H19NO3',
+        context: 'Sumerian agriculturists recorded the opium poppy in cuneiform tablets as early as 3400 BCE, praising it as "Hul Gil". Minoan civilizations celebrated poppy goddesses as central figures of sleep and physical recovery.',
+        method: 'Extracted resin dissolved in warm drinks, medical mixtures, and sacred wine.',
+        symbol: 'Hypnos (Sleep), pain resolution, the restful darkness.',
+        secret: 'Opium was the universal panacea of the ancient world. Egyptian doctors mixed it with coriander to reduce children\'s systemic fevers and physical discomfort.',
+        seal: `<svg class="w-full h-full text-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="50" cy="50" r="35" />
+                <circle cx="50" cy="50" r="15" />
+                <path d="M50 5v90M5 50h90M15 15l70 70M15 85l70-70" />
+                <circle cx="50" cy="50" r="42" />
+               </svg>`
+      },
+      'cannabis': {
+        title: 'Cannabis (The Ancient Herb)',
+        type: 'Hemp Chemistry',
+        formula: 'C21H30O2',
+        context: 'One of the first crops integrated by humans. Ancient China manufactured clothes and nets from hemp ropes. In India, cannabis leaves were integrated into the sacred elixir "Bhang" to connect deeply with Lord Shiva.',
+        method: 'Smoked inside nomadic tents or consumed as standard milk-based drinks.',
+        symbol: 'Deep focus, meditative alignment, chronic pain relief.',
+        secret: 'Scythian warriors threw seeds onto red-hot stones inside felt tents, inducing deep communal relaxation and bonding before battle.',
+        seal: `<svg class="w-full h-full text-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M50 5 L50 95 M5 50 L95 50" stroke-dasharray="4,4" />
+                <polygon points="50,15 75,50 50,85 25,50" />
+                <polygon points="50,25 65,50 50,75 35,50" />
+                <circle cx="50" cy="50" r="10" />
+               </svg>`
+      },
+      'bluelotus': {
+        title: 'Blue Lotus & Sacred Wine',
+        type: 'Euphoric Flora',
+        formula: 'C19H21NO2',
+        context: 'Ancient Egyptians revered the Blue Lotus (*Nymphaea caerulea*). They depicted the floral bloom across temple murals and soaked its petals in high-society wines to trigger a euphoric, dreamlike state.',
+        method: 'In-wine floral infusion or direct tincture consumption.',
+        symbol: 'Solar cycle, rebirth, high-society parties, divine scent.',
+        secret: 'The Blue Lotus opens to the sun by day and sinks back beneath the water at night, mirroring the solar path of the sun god Ra.',
+        seal: `<svg class="w-full h-full text-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="50" cy="50" r="38" />
+                <path d="M50 12 C30 30 30 70 50 88 C70 70 70 30 50 12 Z" />
+                <path d="M12 50 C30 30 70 30 88 50 C70 70 30 70 12 50 Z" stroke-dasharray="2,2" />
+                <circle cx="50" cy="50" r="8" />
+               </svg>`
+      }
+    };
+
+    function showSubstance(id) {
+      const item = codexDetails[id];
+      if (!item) return;
+
+      // Update Codex Details DOM elements
+      document.getElementById('detail-type').innerText = item.type;
+      document.getElementById('detail-title').innerText = item.title;
+      document.getElementById('detail-formula').innerText = item.formula;
+      document.getElementById('detail-context').innerText = item.context;
+      document.getElementById('detail-method').innerText = item.method;
+      document.getElementById('detail-symbol').innerText = item.symbol;
+      document.getElementById('detail-botany-secret').innerText = item.secret;
+      document.getElementById('codex-seal-container').innerHTML = item.seal;
+
+      // Handle selector tab button highlighting
+      document.querySelectorAll('.sub-btn').forEach(btn => {
+        btn.className = "sub-btn w-full text-left p-4 rounded-lg border transition-all duration-300 flex items-center gap-4 bg-charcoal/30 border-gold/10 text-stone/70 hover:border-gold/30 hover:text-stone";
+      });
+
+      const activeBtn = document.getElementById(`btn-${id}`);
+      if (activeBtn) {
+        activeBtn.className = "sub-btn w-full text-left p-4 rounded-lg border transition-all duration-300 flex items-center gap-4 bg-moss border-gold text-parchment shadow-glow-gold";
+      }
+    }
+
+
+    // --- TEMPLE BOTANY QUIZ SYSTEM ---
+    const quizData = [
+      {
+        question: "What name did Sumerian clay-carvers give to the opium poppy around 3400 BCE?",
+        options: [
+          { text: "Bhang (The Herbal Elixir)", correct: false },
+          { text: "Hul Gil (The Joy Plant)", correct: true },
+          { text: "Teonanácatl (Flesh of the Gods)", correct: false },
+          { text: "Cohoba (Sacred Oracle Dust)", correct: false }
+        ]
+      },
+      {
+        question: "What is the primary spiritual significance of the Aztec word Teonanácatl?",
+        options: [
+          { text: "Flesh of the Gods", correct: true },
+          { text: "Soma of the Clouds", correct: false },
+          { text: "Vine of the Mind", correct: false },
+          { text: "Elixir of Life", correct: false }
+        ]
+      },
+      {
+        question: "Which nomadic group threw cannabis seeds on hot stones inside small felt tents to generate euphoric smoke?",
+        options: [
+          { text: "Ancient Cretans", correct: false },
+          { text: "Scythian Warriors", correct: true },
+          { text: "Egyptian High Priests", correct: false },
+          { text: "Mesopotamian Scribes", correct: false }
+        ]
+      },
+      {
+        question: "Which organic synergy did Amazonian chemists discover to allow oral DMT absorption?",
+        options: [
+          { text: "Mixing Psilocybe strains with volcanic ash", correct: false },
+          { text: "Soaking Blue Lotus flower inside Egyptian beer", correct: false },
+          { text: "Combining Ayahuasca vine (MAOI) with DMT-rich leaves", correct: true },
+          { text: "Infusing poppy sap directly into clean honey", correct: false }
+        ]
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function startQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      document.getElementById('quiz-intro-state').classList.add('hidden');
+      document.getElementById('quiz-result-state').classList.add('hidden');
+      document.getElementById('quiz-active-state').classList.remove('hidden');
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const q = quizData[currentQuestionIndex];
+      document.getElementById('quiz-progress').innerText = `Scenario ${currentQuestionIndex + 1} of ${quizData.length}`;
+      document.getElementById('quiz-question-text').innerText = q.question;
+
+      const container = document.getElementById('quiz-options-container');
+      container.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = "w-full text-left p-4 rounded border border-gold/15 bg-charcoal/40 hover:bg-moss/30 hover:border-gold text-stone hover:text-parchment transition duration-300 font-serif text-base flex justify-between items-center";
+        btn.innerHTML = `
+          <span>${opt.text}</span>
+          <i class="fa-regular fa-circle text-gold/30"></i>
+        `;
+        btn.onclick = () => selectOption(opt, btn);
+        container.appendChild(btn);
+      });
+    }
+
+    function selectOption(opt, element) {
+      // Temporarily disable click on other buttons to avoid double-tapping
+      const buttons = document.querySelectorAll('#quiz-options-container button');
+      buttons.forEach(btn => btn.disabled = true);
+
+      if (opt.correct) {
+        score++;
+        element.classList.remove('border-gold/15', 'bg-charcoal/40');
+        element.classList.add('border-emerald-500', 'bg-emerald-950/40', 'text-emerald-100');
+        element.querySelector('i').className = "fa-solid fa-circle-check text-emerald-500";
+      } else {
+        element.classList.remove('border-gold/15', 'bg-charcoal/40');
+        element.classList.add('border-rose-500', 'bg-rose-950/40', 'text-rose-100');
+        element.querySelector('i').className = "fa-solid fa-circle-xmark text-rose-500";
+
+        // Show correct one as well
+        buttons.forEach((btn, idx) => {
+          const correspondingOpt = quizData[currentQuestionIndex].options[idx];
+          if (correspondingOpt.correct) {
+            btn.classList.add('border-emerald-500', 'bg-emerald-950/20');
+          }
+        });
+      }
+
+      setTimeout(() => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < quizData.length) {
+          loadQuestion();
+        } else {
+          showResults();
+        }
+      }, 1500);
+    }
+
+    function showResults() {
+      document.getElementById('quiz-active-state').classList.add('hidden');
+      const resultBox = document.getElementById('quiz-result-state');
+      resultBox.classList.remove('hidden');
+
+      const iconContainer = document.getElementById('quiz-result-icon');
+      const rankTitle = document.getElementById('quiz-result-rank');
+      const rankDesc = document.getElementById('quiz-result-desc');
+      const scoreBadge = document.getElementById('quiz-result-score');
+
+      scoreBadge.innerText = `${score} out of ${quizData.length} Correct`;
+
+      if (score === 4) {
+        iconContainer.innerHTML = `
+          <svg class="w-24 h-20 text-gold pulse-glow" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <polygon points="50,10 90,80 10,80" />
+            <circle cx="50" cy="52" r="18" />
+            <path d="M50 40v24M40 52h20" stroke-width="1"/>
+          </svg>
+        `;
+        rankTitle.innerText = "Temple High Priest";
+        rankDesc.innerText = "Superb alignment. You have unlocked the sacred botanical lineages and demonstrated mastery of entheogenic history.";
+      } else if (score >= 2) {
+        iconContainer.innerHTML = `
+          <svg class="w-24 h-20 text-stone" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="50" cy="50" r="30" />
+            <circle cx="50" cy="50" r="15" stroke-dasharray="2,2"/>
+            <path d="M50 20v60M20 50h60" />
+          </svg>
+        `;
+        rankTitle.innerText = "Temple Scribe";
+        rankDesc.innerText = "A respectable showing. You possess a foundational knowledge of sacred apothecary methods, yet further study is required.";
+      } else {
+        iconContainer.innerHTML = `
+          <svg class="w-24 h-20 text-rose-800" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M10 90 L90 90 M50 10 L50 70" />
+            <circle cx="50" cy="80" r="5" />
+          </svg>
+        `;
+        rankTitle.innerText = "Temple Neophyte";
+        rankDesc.innerText = "Wanderer, you are stuck in the outer courtyard of sensory illusion. Seek the renewal of your mind and try again.";
+      }
+    }
+
+    function resetQuiz() {
+      document.getElementById('quiz-result-state').classList.add('hidden');
+      document.getElementById('quiz-intro-state').classList.remove('hidden');
+    }
+
+    // Initialize display with DMT first on codex
+    window.onload = function() {
+      showSubstance('dmt');
+      selectRegion('amazon');
+    };
+  </script>
+
+</body>
+</html>
